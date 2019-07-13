@@ -24,7 +24,6 @@ export class Form extends Component {
     addNewName() {
         axios.post( 'https://paloitchallenge.herokuapp.com/people.json',  {firstname: this.state.firstname, lastname: this.state.lastname} )
         .then(response => {
-            console.log(`This is the response ${response}`)
             this.setState({
                 firstname: "",
                 lastname: ""
@@ -46,28 +45,29 @@ export class Form extends Component {
                 spacing={0}
                 alignItems="center"
                 justify="center"
-
-                >
-                <Grid container
-                spacing={0}
-                direction="column"
-                alignItems="center"
-                justify="center">
-                    <h2 style={{color: "white"}}>Enter Your First & Last Name Below To Get Some Nerdy Facts Back</h2>
+                style={{marginTop: 30}}>
+                    <Grid 
+                    container
+                    spacing={0}
+                    direction="column"
+                    alignItems="center"
+                    justify="center">
+                        <h1 style={{color: "white"}}>Enter Your First & Last Name Below To Get Some Nerdy Facts Back</h1>
+                    </Grid>
+                        <TextField
+                                label="First Name"
+                                defaultValue={this.state.firstname}
+                                onChange={this.handleChange('firstname')}                      
+                        />
+                        
+                        <TextField
+                                label="Last Name"
+                                color="secondary"
+                                defaultValue={this.state.lastname}
+                                onChange={this.handleChange('lastname')}
+                        />
                 </Grid>
-                <TextField
-                        label="First Name"
-                        defaultValue={this.state.firstname}
-                        onChange={this.handleChange('firstname')}                      
-                />
                 
-                <TextField
-                        label="Last Name"
-                        color="secondary"
-                        defaultValue={this.state.lastname}
-                        onChange={this.handleChange('lastname')}
-                />
-                </Grid>
                 <Grid
                 container
                 spacing={0}
@@ -75,11 +75,12 @@ export class Form extends Component {
                 justify="center"
                 style={{marginTop: 30}}
                 >
-                <Button 
-                variant="contained" 
-                color="secondary" 
-                onClick={this.addNewName}>Add New Name</Button>
+                    <Button 
+                    variant="contained" 
+                    color="secondary" 
+                    onClick={this.addNewName}>Add New Name</Button>
                 </Grid>
+               
                 
             </React.Fragment>
             

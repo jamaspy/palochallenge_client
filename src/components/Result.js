@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
+import './Loader.css';
 
 class Result extends React.Component {
   state = {
@@ -26,7 +27,11 @@ class Result extends React.Component {
 
   componentDidMount() {
   this.fetchNames();
-}
+  }
+
+  componentDidUpdate() {
+    this.fetchNames();
+    }
 
   render() {
     const { isLoading, names, error } = this.state;
@@ -58,17 +63,21 @@ class Result extends React.Component {
               padding:10,
               color: "white"
               }}>
-              <p>Name: {firstname} {lastname}</p>
-              <p>ASCII: {asciify} </p>
-              <p>Binary: {binarify}</p>
+              <h2>{firstname} {lastname}</h2> 
+              
+              <p>ASCII Value: {asciify} </p>
+              <p>Binary Value: {binarify}</p>
               <p>Max Consecutive Zeros: {countZeros}</p>
 
             </div>
           );
         })
-      // If there is a delay in data, let's let the user know it's loading
+      // If there is a delay in data, show loader 
       ) : (
-        <h3>Please Hold Caller...</h3>
+        <div sytle={{textAlign:"center"}}>
+        <p style={{color: "white"}}>Please Hold Caller...</p>
+        <div class="lds-ripple"><div></div><div></div></div>
+        </div>
       )}
       </Grid>
     </React.Fragment>
