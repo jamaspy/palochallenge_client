@@ -5,11 +5,8 @@ import './App.css';
 
 function App() {
   return (
-    <div 
-    className="App" 
-    style={{
-      
-      }}>
+    <div className="App">
+      <h1 style={{color: "white"}}>Enter Your First & Last Name Below To Get Some Nerdy Facts Back</h1>
      <Form/>
      <Result/>
     </div>

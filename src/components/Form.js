@@ -14,13 +14,15 @@ export class Form extends Component {
         this.handleChange = this.handleChange.bind(this)
         this.addNewName = this.addNewName.bind(this)
     }
-    
+
+    // Sets state to users input for firstname and lastname input
     handleChange = input => event => {
         this.setState({
             [input]: event.target.value
         });
     }
 
+    // Takes current state of firstname and lastname and sends to DB then ressets state to ""
     addNewName() {
         axios.post( 'https://paloitchallenge.herokuapp.com/people.json',  {firstname: this.state.firstname, lastname: this.state.lastname} )
         .then(response => {
@@ -46,14 +48,7 @@ export class Form extends Component {
                 alignItems="center"
                 justify="center"
                 style={{marginTop: 30}}>
-                    <Grid 
-                    container
-                    spacing={0}
-                    direction="column"
-                    alignItems="center"
-                    justify="center">
-                        <h1 style={{color: "white"}}>Enter Your First & Last Name Below To Get Some Nerdy Facts Back</h1>
-                    </Grid>
+                    
                         <TextField
                                 label="First Name"
                                 defaultValue={this.state.firstname}
@@ -66,6 +61,7 @@ export class Form extends Component {
                                 defaultValue={this.state.lastname}
                                 onChange={this.handleChange('lastname')}
                         />
+
                 </Grid>
                 
                 <Grid
@@ -79,9 +75,9 @@ export class Form extends Component {
                     variant="contained" 
                     color="secondary" 
                     onClick={this.addNewName}>Add New Name</Button>
+
                 </Grid>
                
-                
             </React.Fragment>
             
         )
