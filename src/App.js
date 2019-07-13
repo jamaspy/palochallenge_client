@@ -8,7 +8,7 @@ function App() {
     <div 
     className="App" 
     style={{
-      backgroundImage: "linear-gradient(160deg, #fc4a1a 0%, #f7b733 100%)", 
+      backgroundImage: "linear-gradient(160deg, rgba(39,199,171,1) 0%, rgba(70,143,197,1) 90%)", 
       height: "100vh"
       }}>
      <Form/>
@@ -16,5 +16,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;

@@ -55,19 +55,20 @@ class Result extends React.Component {
               borderRadius: 10, 
               textAlign:'center', 
               margin:10, 
-              padding:10
+              padding:10,
+              color: "white"
               }}>
               <p>Name: {firstname} {lastname}</p>
               <p>ASCII: {asciify} </p>
               <p>Binary: {binarify}</p>
-              <p>Zeros: {countZeros}</p>
+              <p>Max Consecutive Zeros: {countZeros}</p>
 
             </div>
           );
         })
       // If there is a delay in data, let's let the user know it's loading
       ) : (
-        <h3>Loading...</h3>
+        <h3>Please Hold Caller...</h3>
       )}
       </Grid>
     </React.Fragment>
