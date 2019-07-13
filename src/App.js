@@ -5,7 +5,12 @@ import Result from './components/Result';
 
 function App() {
   return (
-    <div className="App">
+    <div 
+    className="App" 
+    style={{
+      backgroundImage: "linear-gradient(160deg, #fc4a1a 0%, #f7b733 100%)", 
+      height: "100vh"
+      }}>
      <Form/>
      <Result/>
     </div>
