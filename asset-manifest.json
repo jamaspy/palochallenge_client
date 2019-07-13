@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jamaspy/palochallenge_client/static/css/main.34de6062.chunk.css",
+    "main.js": "/jamaspy/palochallenge_client/static/js/main.64b5c5e3.chunk.js",
+    "main.js.map": "/jamaspy/palochallenge_client/static/js/main.64b5c5e3.chunk.js.map",
+    "runtime~main.js": "/jamaspy/palochallenge_client/static/js/runtime~main.9a7e628f.js",
+    "runtime~main.js.map": "/jamaspy/palochallenge_client/static/js/runtime~main.9a7e628f.js.map",
+    "static/js/2.a7d2c5c4.chunk.js": "/jamaspy/palochallenge_client/static/js/2.a7d2c5c4.chunk.js",
+    "static/js/2.a7d2c5c4.chunk.js.map": "/jamaspy/palochallenge_client/static/js/2.a7d2c5c4.chunk.js.map",
+    "index.html": "/jamaspy/palochallenge_client/index.html",
+    "precache-manifest.d45e14d8d64482812a8e4d6b2c8c82e4.js": "/jamaspy/palochallenge_client/precache-manifest.d45e14d8d64482812a8e4d6b2c8c82e4.js",
+    "service-worker.js": "/jamaspy/palochallenge_client/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/jamaspy/palochallenge_client/static/css/main.34de6062.chunk.css.map"
+  }
+}
