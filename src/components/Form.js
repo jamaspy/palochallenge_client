@@ -22,7 +22,7 @@ export class Form extends Component {
         });
     }
 
-    // Takes current state of firstname and lastname and sends to DB then ressets state to ""
+    // Takes current state of firstname and lastname and sends to DB then resets state to ""
     addNewName() {
         axios.post( 'https://paloitchallenge.herokuapp.com/people.json',  {firstname: this.state.firstname, lastname: this.state.lastname} )
         .then(response => {
@@ -36,12 +36,9 @@ export class Form extends Component {
         })
     }
 
-
     render() {
         return (
-        
             <React.Fragment>
-                
                 <Grid
                 container
                 spacing={0}
@@ -51,17 +48,16 @@ export class Form extends Component {
                     
                         <TextField
                                 label="First Name"
+                                required="true"
                                 defaultValue={this.state.firstname}
                                 onChange={this.handleChange('firstname')}                      
                         />
-                        
                         <TextField
                                 label="Last Name"
-                                color="secondary"
+                                required="true"
                                 defaultValue={this.state.lastname}
                                 onChange={this.handleChange('lastname')}
                         />
-
                 </Grid>
                 
                 <Grid
