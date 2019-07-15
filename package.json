@@ -2,7 +2,7 @@
   "name": "paloreact",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/jamaspy/palochallenge_client",
+  "homepage": "https://github.com/palochallenge_client",
   "dependencies": {
     "@material-ui/core": "^4.2.0",
     "axios": "^0.19.0",
